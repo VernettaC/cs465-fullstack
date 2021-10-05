@@ -16,5 +16,6 @@
     "nodemon": "^2.0.12",
     "request": "^2.88.2",
     "seedgoose": "^2.0.2"
-  }
+  },
+  "devDependencies": {}
 }
