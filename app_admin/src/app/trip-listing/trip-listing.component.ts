@@ -33,11 +33,11 @@ export class TripListingComponent implements OnInit {
     console.log('Inside TripListingComponent#getTrips'); 
     this.message = 'Searching for trips'; 
     this.tripDataService
-     .getTrips()
-       .then(foundTrips => {
-         this.message = foundTrips.length > 0 ? '' : 'No trips found';
-         this.trips = foundTrips;
-       });
+    .getTrips()
+    .then(foundTrips => {
+      this.message = foundTrips.length > 0 ? '' : 'No trips found';
+      this.trips = foundTrips;
+    });
 }
 
 public isLoggedIn(): boolean {

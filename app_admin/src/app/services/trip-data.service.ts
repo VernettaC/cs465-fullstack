@@ -29,7 +29,8 @@ export class TripDataService {
   public getTrips(): Promise<Trip[]> {
     console.log('Inside TripDataService#getTrips');
     return this.http
-      .get(this.tripUrl)
+      .get(`${this.apiBaseUrl}trips`)
+      //.get(this.tripUrl)
       .toPromise()
       .then(response => response.json() as Trip[])
       .catch(this.handleError);

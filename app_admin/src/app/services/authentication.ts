@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { BROWSER_STORAGE } from '../storage';
 import { User } from '../models/user';
 import { AuthResponse } from '../models/authresponse';
-import { TripDataService } from './trip-data.service';
+import { TripDataService } from '../services/trip-data.service';
 
 @Injectable({
     providedIn: 'root'
@@ -16,7 +16,7 @@ constructor(
 ) { }
 
 public getToken(): string {
-    return this.storage.getItem('travlr-token');
+    return this.storage.getItem('travelr-token');
 }
 
 public saveToken(token: string): void {
