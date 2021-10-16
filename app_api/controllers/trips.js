@@ -68,15 +68,15 @@ const tripsAddTrip = async (req, res) => {
                         .status(201)
                         .json(trip);
                 }
-            })
+            });
         }
     )
 }
 
 const tripsUpdateTrip = async (req, res) => {
+    console.log(req.body);
     getUser(req,res,
         (req, res) => {
-        console.log(req.body);
         Trip
             .findOneAndUpdate({ 'code': req.params.tripCode }, {
                 code: req.body.code,
